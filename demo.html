@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="demo.css">   
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script> 
+
+  
+     
+    
+   
+
+</head> 
+<body>
+<div class="header"> 
+    <div class="search-container">
+
+        <button class="button">Fashion Factory.in</button> 
+       
+            
+        <input style="margin-top: 0.7rem;
+        width: 46rem;
+        height: 2.2rem;
+        margin-left: 4rem;
+        border-radius: 0.5rem;
+        border: solid 0px;
+        padding-left: 13px;" type="text" placeholder="Search Clothing,Accesories and Beauty Products here..." name="search">
+       <img style="cursor: pointer;" class="searchbar" src="search.png">
+      
+       <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\Signup.html" class="cont"> Login</a> |
+      <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\form.html" class="cont1">Sign Up</a>
+      <a class="cart1" href="#"><img style="width: 34px;
+        margin-left: 20px"src="wishlist.png">wishlist</a>
+      <a class="cart1" href="#"><img style="width: 32px;
+        padding-left: 13px;
+        padding-top: 9px;"src="Cart.png">Cart</a>
+     
+    </div>
+   
+    
+    
+
+
+    <!-- <div class="container" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+
+      <script>
+        function myFunction(x) {
+          x.classList.toggle("change");
+        }
+        </script> -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <hr>
+            <h5 class="sidebar">Shop by Category</h5>
+            <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\clothingSection.html"><button class="b1">Womens Clothing</button></a>
+            <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\jewlery.html"><button class="b2" style="margin-left:-2rem;">Earrings</button></a>
+            <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\Beauty Products.html"><button class="b2" style="margin-left:-0.5rem;">Beauty Products</button></a>
+            <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\neckpieceSection.html"><button class="b2" style="margin-left:0rem;margin-top: 1rem;">Neck wear, chokers</button></a>
+              <hr style="margin-top: 2rem;
+              width: 19rem;">
+
+          </div>
+
+</div>
+         
+          
+          
+        
+          <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "300px";
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+          </script>
+             
+      
+     
+
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active"style="font-size:19px; margin-left: -4rem;cursor:pointer;color:azure;border: #000000;" onclick="openNav()">&#9776; Home Store
+          </a>
+        <div class="dropdown">
+            <button class="dropbtn">Women's Clothing
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                
+              <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\clothingSection.html">Tops & Tunics</a>
+              <a href="#">Jeans</a>
+              <a href="#">Lehenga</a>
+              <a href="#">kurti & kurta</a>
+              <a href="#">Saree</a>
+            </div>
+          </div>
+          <div class="dropdown"> 
+          <button class="dropbtn">Earrings
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\jewlery.html">Oxidized Earrings</a>
+            <a href="#">Tops</a>
+            <a href="#">Party wear</a>
+            <a href="#">Ethnic Earrings</a>
+          </div>
+        </div> 
+        <div class="dropdown">
+        <button class="dropbtn">Neck wear
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\neckpieceSection.html">Oxidized Neckpiece</a>
+            <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\neckpieceSection.html">Casual Neckpiece</a>
+            <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\neckpieceSection.html">Choker</a>
+          </div>
+        </div> 
+        <div class="dropdown">
+          <button class="dropbtn">Beauty Products
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\Beauty Products.html">Compact Powder</a>
+            <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\Beauty Products.html">Lipstick & lipgloss</a>
+            <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\Beauty Products.html">foundation</a>
+            <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\Beauty Products.html">Kajal & Maskara</a>
+          </div>
+          
+        </div> 
+        <a class="ret" style="width: 13rem;
+        margin-top: -3rem;
+        margin-left: 7rem;"href="#"><img style="width: 25px;
+    padding-top: 46px;"src="orders.png">Returns & Orders</a>
+        
+         <!-- <div>
+          <div class="navbar1">
+            <a href="#">cateogories</a>
+            <div class="subnav">
+              <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
+              <div class="subnav-content">
+                <a href="#company">Company</a>
+                <a href="#team">Team</a>
+                <a href="#careers">Careers</a>
+              </div>
+            </div> 
+            <div class="subnav">
+              <button class="subnavbtn">Services <i class="fa fa-caret-down"></i></button>
+              <div class="subnav-content">
+                <a href="#bring">Bring</a>
+                <a href="#deliver">Deliver</a>
+                <a href="#package">Package</a>
+                <a href="#express">Express</a>
+              </div>
+            </div> 
+            <div class="subnav">
+              <button class="subnavbtn">Partners <i class="fa fa-caret-down"></i></button>
+              <div class="subnav-content">
+                <a href="#link1">Link 1</a>
+                <a href="#link2">Link 2</a>
+                <a href="#link3">Link 3</a>
+                <a href="#link4">Link 4</a>
+              </div>
+            </div>
+            <a href="#contact">Contact</a>
+             </div>
+         
+          <img src="image 401.png" style="width:100%;margin-top: 1rem;">
+          
+        </div> -->
+
+      </div>
+
+      
+      <div>
+         
+      <img src="ban3.png" style="width:100%;margin-top: 1rem;margin-top: -0.73rem;">
+      
+    </div>
+        
+
+        
+
+        <!-- <div class="slideshow-container">
+
+         
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="image 301.png" style="width:70%">
+            <div class="text">Caption Text</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="image 301.png" style="width:70%">
+            <div class="text">Caption Two</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="image 301.png" style="width:70%">
+            <div class="text">Caption Three</div>
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+          </div>
+          <br>
+          
+          <div style="text-align:center; margin-top:20rem">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+          </div>
+          
+           
+          
+        
+       
+         -->
+
+         <div class="row">
+          <div class="column">
+            <div class="card">
+              <img class="picture" src="clothing.png">
+             <a class="link1" href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\clothingSection.html"><p class="cardtitle">Women's Clothing</p></a>
+              
+            </div>
+          </div>
+        
+          <div class="column">
+            <div class="card">
+              <img class="picture" src="jewelry1.png">
+              <a class="link1" href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\neckpieceSection.html"><p class="cardtitle">Jewellery & Accesories</p></a>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card">
+              <img class="picture" src="jewelry2.png">
+              <a class="link1" href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\neckpieceSection.html"><p class="cardtitle">Oxidized & Trendy Jewellery</p></a>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card">
+              <img class="picture" src="makeup1.png">
+              <a class="link1" href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\Beauty Products.html" ><p class="cardtitle">Beauty Products</p></a>
+            </div>
+
+            
+          </div>
+        </div>
+              <img class="poster" src="poster.png">
+        <div>
+
+        </div>
+      
+        <div class="secondhead">
+          <p class="title">Clothing Categories</p>
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              <img class="picture" src="jeans.png">
+              <p class="cardtitle">Jeans, Trousers & Pants</p>
+            </div>
+          </div>
+        
+          <div class="column">
+            <div class="card">
+              <img class="picture" src="tops.png">
+              <p class="cardtitle">Tops ,Tees & Tunics</p>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card">
+             <img class="picture" src="saree1.png">
+              <p class="cardtitle">Sarees & Lehenga</p>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card">
+              <img class="picture" src="gown.png">
+              <p class="cardtitle">Trendy and Party Wear Gowns</p>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="secondhead">
+          <p class="title">Jewellery Categories</p>
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              <img class="picture" src="Earrings.png">
+              <p class="cardtitle">Traditional & Elegant Earrings</p>
+            </div>
+          </div>
+        
+          <div class="column">
+            <div class="card">
+              <img class="picture" src="necklace.png">
+              <p class="cardtitle">Neckpiece & Chokers</p>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card">
+             <img class="picture" src="nosering.png">
+              <p class="cardtitle">Beautiful Nose Rings</p>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card">
+              <img class="picture" src="bangle.png">
+              <a class="link1" href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\bangleSection.html"><p class="cardtitle">Bangles & Chuda Sets</p></a>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="secondhead">
+          <p class="title">Beauty Products Categories</p>
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              <img class="picture" src="lipstick.png">
+              <p class="cardtitle">Lipstick & Lipgloss</p>
+            </div>
+          </div>
+        
+          <div class="column">
+            <div class="card">
+              <img class="picture" src="makeup.png">
+              <p class="cardtitle">Compact & Eyeshadows</p>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card">
+             <img class="picture" src="foundation.png">
+              <p class="cardtitle">High Radiance Foundations</p>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card">
+              <img class="picture" src="kajal.png">
+              <p class="cardtitle">Kajal & Maskara</p>
+            </div>
+          </div>
+        </div>
+        </div>
+
+      </div>
+      <img style="margin-top: 4rem;"class="poster" src="trendy1.png">
+<div>
+ 
+
+   <div class="secondhead1">
+          <p class="title1">We Deliver The Best..</p>
+        <div class="row">
+          <div class="column4">
+            <!-- <div class="card4"> -->
+               <img class="picture1" src="small1.png"> 
+              <p class="cardtitle"></p>
+            <!-- </div> -->
+          </div>
+        
+          <div class="column4">
+            <!-- <div class="card5"> -->
+               <img class="picture1" src="trendy3.png"> 
+              <p class="cardtitle"></p>
+            <!-- </div> -->
+          </div>
+        </div>  
+        
+        <div class="secondhead6">
+          <p class="title">New Arrivals</p>
+        <div class="row">
+          <div class="column6">
+            <div class="card6">
+              <img class="picture2" src="last1.png"> 
+              <!-- <p class="cardtitle">Lipstick & Lipgloss</p> -->
+            </div>
+          </div>
+        
+          <div class="column6">
+            <div class="card6">
+              <img class="picture2" src="last2.png">
+              <!-- <p class="cardtitle">Compact & Eyeshadows</p> -->
+            </div>
+          </div>
+          
+          <div class="column6">
+            <div class="card6">
+            <img class="picture2" src="last3.png"> 
+              <!-- <p class="cardtitle">High Radiance Foundations</p> -->
+            </div>
+          </div>
+          
+          <div class="column6">
+            <div class="card6">
+              <img class="picture2" src="last4.png">
+              <!-- <p class="cardtitle">Kajal & Maskara</p> -->
+            </div>
+          </div>
+
+          <div class="column6">
+            <div class="card6">
+             <img class="picture2" src="last5.png">
+              <!-- <p class="cardtitle">Kajal & Maskara</p> -->
+            </div>
+          </div>
+
+          <div class="column6">
+            <div class="card6">
+              <img class="picture2" src="last6.png"> 
+              <!-- <p class="cardtitle">Kajal & Maskara</p> -->
+            </div>
+          </div>
+        </div>
+        </div>
+
+        
+       
+       
+       
+       
+       <div class="footer">
+         <p style="padding-top: 2rem;padding-top: 2rem;
+         margin-left: -62rem;
+         font-size: 30pt;
+         color: aqua;">Fashion Factory.in</p>
+         <hr style="color: aliceblue;">
+
+         <div class="row1">
+          <div class="column1">
+            <p class="linkhead">Fashion Factory</p>
+            <ul style="text-align: initial;">
+           <li><a href="#" class="foot">Get to Know Us</a></li>
+            <li><a href="#" class="foot">Terms & Conditions</a></li>
+            <li><a href="#" class="foot">Fashion cares</a></li>
+            <li><a href="#" class="foot">Gift a smile</a></li>
+            </ul>
+          </div>
+
+         
+          <div class="column1">
+            <P class="linkhead1">Shop</P>
+            <ul style="text-align: initial;">
+           <li><a href="#" class="foot">Women Clothing</a></li>
+            <li><a href="#" class="foot">Accesories</a></li>
+            <li><a href="#" class="foot">Beauty Products</a></li>
+            <li><a href="#" class="foot">New Arrivals</a></li>
+            </ul>
+          </div>
+         
+        
+          <div class="column1">
+            <p class="linkhead1">Help</p>
+            <ul style="text-align: initial;">
+           <li><a href="#" class="foot">Track your Order</a></li>
+            <li><a href="#" class="foot">Payments</a></li>
+            <li><a href="#" class="foot">Returns & Cancellations</a></li>
+            <li><a href="#" class="foot">Customer Care</a></li>
+            </ul>
+          </div>
+        
+          <div class="column1">
+            <p class="linkhead2">Payments</p>
+            <ul style="text-align: initial;">
+           <li><a href="#" class="foot">Cash On Delivery</a></li>
+            <li><a href="#" class="foot">Debit & Credit Card</a></li>
+            <li><a href="#" class="foot">Net Banking</a></li>
+            <li><a href="#" class="foot"> Redeem Coupons</a></li>
+            </ul>
+          </div>
+         </div>
+         
+         
+        
+        
+         <p style="font-weight: 600;">Connect with Us</p>
+         <p>Email us : fashionfactory@gmail.com |  Contact no: +91-123456789</p>
+         <div style="padding-bottom: 0rem;">
+          <a class="face" href="#"><img  class="face" src="facebook1.png"></a>
+          <a class="face" href="#"><img  class="face"src="youtube1.png"></a>
+          <a class="face" href="#"><img  class="face" src="whats1.png"></a>
+          <a class="face" href="#"><img  class="face" src="insta1.png"></a>
+
+          <div>
+            <p>Pay with</p>
+            <a class="face" href="#"><img  class="face" src="bhim.png"></a>
+            <a class="face" href="#"><img  class="face" src="gopay.png"></a>
+            <a class="face" href="#"><img  class="face" src="paytm.png"></a>
+            <a class="face" href="#"><img  class="face" src="debit.png"></a>
+          </div>
+          
+
+      </div>
+      <!-- <p style="margin-top: -2rem; padding-bottom: 0rem;color:linen;">@2021 all Rights Reserved</p>
+       -->
+        <!-- <a class="face" href="#"><img  class="face" src="bhim.png"></a>
+        <a class="face" href="#"><img  class="face" src="gopay.png"></a>
+        <a class="face" href="#"><img  class="face" src="paytm.png"></a>
+        <a class="face" href="#"><img  class="face" src="debit.png"></a> -->
+      
+      <p style="background: black;color:linen"> Condition of Use & Sale | Developed By fashionfactory.in(India) |  © 2021 all Rights Reserved</p>
+      
+       </div>
+       
+
+        
+
+     
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

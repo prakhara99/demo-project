@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - FashionFactory.in</title>
+    <link rel="stylesheet" href="signup.css">
+    <script src="validate.js"></script>
+    <!-- <link rel="stylesheet" href="style.css">
+    <script src="validator.js"></script>
+    -->
+
+</head> 
+<body>
+<form name="contactForm" onsubmit="return validateForm()" action="confirmation.html" method="post">
+    <h2>Login</h2>
+    <div class="row">
+        <label>Name:</label>
+        <input type="text" name="name">
+        <div class="error" id="nameErr"></div>
+    </div>
+    <div class="row">
+        <label>Email:</label>
+        <input type="text" name="email">
+        <div class="error" id="emailErr"></div>
+    </div>
+    <div class="row">
+        <input type="submit" value="Login">
+    </div>
+</form>
+</body>
+</html>

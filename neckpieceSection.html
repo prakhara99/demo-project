@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="Beauty.css">   
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script> 
+
+  
+     
+    
+   
+
+</head> 
+<body>
+<div class="header"> 
+    <div class="search-container">
+
+        <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\demo.html"><button class="button">Fashion Factory.in</button></a>
+       
+            
+        <input style="margin-top: 0.7rem;
+        width: 46rem;
+        height: 2.2rem;
+        margin-left: 4rem;
+        border-radius: 0.5rem;
+        border: solid 0px;
+        padding-left: 13px;" type="text" placeholder="Search Clothing,Accesories and Beauty Products here..." name="search">
+       <img style="cursor: pointer;" class="searchbar" src="search.png">
+      
+       <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\Signup.html" class="cont"> Login</a> |
+      <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\form.html" class="cont1">Sign Up</a>
+      <a class="cart1" href="#"><img style="width: 34px;
+        margin-left: 20px"src="wishlist.png">wishlist</a>
+      <a class="cart1" href="#"><img style="width: 32px;
+        padding-left: 13px;
+        padding-top: 9px;"src="Cart.png">Cart</a>
+     
+    </div>
+   
+    
+    
+
+
+    <!-- <div class="container" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+
+      <script>
+        function myFunction(x) {
+          x.classList.toggle("change");
+        }
+        </script> -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <hr>
+            <h5 class="sidebar">Shop by Category</h5>
+            <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\clothingSection.html"><button class="b1">Womens Clothing</button></a>
+            <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\jewlery.html"><button class="b2" style="margin-left:-2rem;">Earrings</button></a>
+            <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\Beauty Products.html"><button class="b2" style="margin-left:-0.5rem;">Beauty Products</button></a>
+            <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\neckpieceSection.html"><button class="b2" style="margin-left:0rem;margin-top: 1rem;">Neck wear, chokers</button></a>
+              <hr style="margin-top: 2rem;
+              width: 19rem;">
+
+          </div>
+
+</div>
+         
+          
+          
+        
+          <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "300px";
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+          </script>
+             
+      
+     
+
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active"style="font-size:19px; margin-left: -4rem;cursor:pointer;color:azure;border: #000000;" onclick="openNav()">&#9776; Home Store
+          </a>
+        <div class="dropdown">
+            <button class="dropbtn">Women's Clothing
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                
+              <a href="#">Tops & Tunics</a>
+              <a href="#">Jeans</a>
+              <a href="#">Lehenga</a>
+              <a href="#">kurti & kurta</a>
+              <a href="#">Saree</a>
+            </div>
+          </div>
+          <div class="dropdown"> 
+          <button class="dropbtn">Earrings
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Oxidized Earrings</a>
+            <a href="#">Tops</a>
+            <a href="#">Party wear</a>
+            <a href="#">Ethnic Earrings</a>
+          </div>
+        </div> 
+        <div class="dropdown">
+        <button class="dropbtn">Neck wear
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\neckpieceSection.html">Oxidized Neckpiece</a>
+            <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\neckpieceSection.html">Casual Neckpiece</a>
+            <a href="C:\Users\prakh\OneDrive\Desktop\edubridge course\javascript\neckpieceSection.html">Choker</a>
+          </div>
+        </div> 
+        <div class="dropdown">
+          <button class="dropbtn">Beauty Products
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Compact Powder</a>
+            <a href="#">Lipstick & lipgloss</a>
+            <a href="#">foundation</a>
+            <a href="#">Kajal & Maskara</a>
+          </div>
+          
+        </div> 
+        <a class="ret" style="width: 13rem;
+        margin-top: -3rem;
+        margin-left: 7rem;"href="#"><img style="width: 25px;
+    padding-top: 46px;"src="orders.png">Returns & Orders</a>
+    
+    </div> 
+
+<div class="row3">
+    <div class="column3">
+    
+      <h2>Categories</h2>
+      <p class="heading1">Womens Clothing</p>
+      <label><input type="checkbox" name="hobbies[]" value="Clothing">Jeans, jeggings & Trousers</label><br>
+      <label><input type="checkbox" name="hobbies[]" value="tees">Tops, Tees & Tunics</label><br>
+      <label><input type="checkbox" name="hobbies[]" value="saree">Saree</label><br>
+      <label><input type="checkbox" name="hobbies[]" value="lehenga">Lehenga</label><br>
+      <label><input type="checkbox" name="hobbies[]" value="Gowns">Causal & party Gowns</label><br>
+      <label><input type="checkbox" name="hobbies[]" value="salwar & chudidar">Salwar & Chudidar</label><hr>  
+
+      <p class="heading1">Price</p>
+      <label><input type="checkbox" name="price[]" value="price">Under ₹1,000</label><br>
+      <label><input type="checkbox" name="price[]" value="price"> ₹1,000 - ₹5,000</label><br>
+      <label><input type="checkbox" name="price[]" value="price">₹5,000 - ₹10,000</label><br>
+      <label><input type="checkbox" name="price[]" value="price">₹10,000 - ₹20,000</label><br>
+      <label><input type="checkbox" name="price[]" value="price">Over ₹20,000</label><hr>
+
+      <p class="heading1">Colors</p>
+      <button class="button4" style="background-color: blue;"></button>
+      <button class="button4" style="background-color: yellow;"></button>
+      <button class="button4" style="background-color: RED;"></button>
+      <button class="button4" style="background-color: black;"></button>
+      <button class="button4" style="background-color: pink;"></button>
+      <button class="button4" style="background-color: brown;"></button><br>
+      <button class="button4" style="background-color: darkgreen;"></button>
+      <button class="button4" style="background-color: teal;"></button>
+      <button class="button4" style="background-color: darkorange;"></button>
+      <button class="button4" style="background-color: lightcoral;"></button>
+      <button class="button4" style="background-color: whitesmoke;"></button>
+      <button class="button4" style="background-color: purple;"></button>
+      <button class="button4" style="background-color: hotpink;"></button>
+      <button class="button4" style="background-color: darkgoldenrod;"></button>
+      <button class="button4" style="background-color: aqua;"></button>
+      <button class="button4" style="background-color: maroon;"></button>
+      <button class="button4" style="background-color: chartreuse;"></button><hr>
+
+      <p class="heading1">Pay on Delivey</p>
+
+      <label><input type="checkbox" name="pay[]" value="pay">Pay on Delivey</label><hr>
+
+
+      <p class="heading1">Materials</p>
+      <label><input type="checkbox" name="mat" value="mat">Cotton</label><br>
+      <label><input type="checkbox" name="mat" value="mat">Rayon</label><br>
+      <label><input type="checkbox" name="mat" value="mat">Silk</label><br>
+      <label><input type="checkbox" name="mat" value="mat">Georgette</label><br>
+      <label><input type="checkbox" name="mat" value="mat">Net</label><br>
+      <label><input type="checkbox" name="mat" value="mat">Synthetic</label><br>
+      <label><input type="checkbox" name="mat" value="mat">Crepe</label><hr>
+
+      <p class="heading1">Size</p>
+      <button class="btn">3XS</button>
+      <button class="btn">2XS</button>
+      <button class="btn"> XS </button>
+      <button class="btn"> S </button>
+      <button class="btn"> M </button>
+      <button class="btn"> L </button>
+      <button class="btn"> XL </button>
+      <button class="btn"> 2XL </button>
+      <button class="btn"> 3XL </button>
+      <button class="btn"> 4XL </button>
+      <button class="btn"> 5XL </button>
+      <button class="btn"> 6XL </button>
+      <button class="btn"> 7XL </button>
+      <button class="btn"> 8XL </button><hr>
+      
+
+      <P class="heading1">Availability</P>
+      <label><input type="checkbox" name="stock" value="stock">Out of Stock</label><hr>
+ 
+
+      <p class="heading1">Top Brands</p>
+      <label><input type="checkbox" name="Aurelia" value="aur">Aurelia</label><br>
+      <label><input type="checkbox" name="W" value="W">W</label><br>
+      <label><input type="checkbox" name="Libas" value="Libas">Libas</label><br>
+      <label><input type="checkbox" name="Morpankh" value="mor">Morpankh</label><br>
+      <label><input type="checkbox" name="janaysa" value="janaysa">Janaysa</label><br>
+
+
+
+
+
+
+
+    </div>
+</div>
+
+<div class="secondhead1">
+    <p class="title1" style="border-bottom: solid 1px gray;margin-top: -150rem;">Fashion Factory Trends..</p>
+    
+  <div class="row">
+    <div class="column4">
+      <!-- <div class="card4"> -->
+         <img class="picture3" src="clothban.png"> 
+        <p class="cardtitle"></p>
+      <!-- </div> -->
+    </div>
+  
+    
+
+
+  <hr class="line2">
+
+  <div class="columnp" style="float: left;">
+  <div class="cardcart" style="float: left;
+  width: 19rem;margin-left: 20rem;">
+    <img  class="cloths" src="neck1.png" alt="Denim Jeans" style="width:100%">
+    <h1>Tailored Jeans</h1>
+    <p class="price">$19.99</p>
+    <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+    <p><button>Add to Cart</button></p>
+  </div>
+  <div class="cardcart" style="width: 19rem;
+  float: left;
+  margin-left: 2rem;">
+    <img  class="cloths" src="neck2.png" alt="Denim Jeans" style="width:100%">
+    <h1>Tailored Jeans</h1>
+    <p class="price">$19.99</p>
+    <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+    <p><button>Add to Cart</button></p>
+  </div>
+  <div class="cardcart" style="width: 19rem;
+  float: left;
+  margin-left: 2rem;">
+    <img  class="cloths" class="cloths" src="neck3.png" alt="Denim Jeans" style="width:100%">
+    <h1>Tailored Jeans</h1>
+    <p class="price">$19.99</p>
+    <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+    <p><button>Add to Cart</button></p>
+  </div>
+  </div>
+  
+  <br><br><Br>
+
+  <div class="columnp" style="float: left;margin-top: 4rem;">
+    <div class="cardcart" style="float: left;
+    width: 19rem;margin-left: 20rem;">
+      <img class="cloths" src="neck4.png" alt="Denim Jeans" style="width:100%">
+      <h1>Tailored Jeans</h1>
+      <p class="price">$19.99</p>
+      <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    <div class="cardcart" style="width: 19rem;
+    float: left;
+    margin-left: 2rem;">
+      <img  class="cloths" src="neck5.png" alt="Denim Jeans" style="width:100%">
+      <h1>Tailored Jeans</h1>
+      <p class="price">$19.99</p>
+      <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    <div class="cardcart" style="width: 19rem;
+    float: left;
+    margin-left: 2rem;">
+      <img  class="cloths" src="neck6.png" alt="Denim Jeans" style="width:100%">
+      <h1>Tailored Jeans</h1>
+      <p class="price">$19.99</p>
+      <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    </div><br>
+
+
+    <div class="columnp" style="float: left;margin-top: 4rem;">
+        <div class="cardcart" style="float: left;
+        width: 19rem;margin-left: 20rem;">
+          <img  class="cloths" src="neck7.png" alt="Denim Jeans" style="width:100%">
+          <h1>Tailored Jeans</h1>
+          <p class="price">$19.99</p>
+          <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+          <p><button>Add to Cart</button></p>
+        </div>
+        <div class="cardcart" style="width: 19rem;
+        float: left;
+        margin-left: 2rem;">
+          <img  class="cloths" src="neck18.png" alt="Denim Jeans" style="width:100%">
+          <h1>Tailored Jeans</h1>
+          <p class="price">$19.99</p>
+          <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+          <p><button>Add to Cart</button></p>
+        </div>
+        <div class="cardcart" style="width: 19rem;
+        float: left;
+        margin-left: 2rem;">
+          <img class="cloths" src="neck9.png" alt="Denim Jeans" style="width:100%">
+          <h1>Tailored Jeans</h1>
+          <p class="price">$19.99</p>
+          <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+          <p><button>Add to Cart</button></p>
+        </div>
+        </div><br>
+
+        <div class="columnp" style="float: left;margin-top: 4rem;">
+            <div class="cardcart" style="float: left;
+            width: 19rem;margin-left: 20rem;">
+              <img class="cloths" src="neck10.png" alt="Denim Jeans" style="width:100%">
+              <h1>Tailored Jeans</h1>
+              <p class="price">$19.99</p>
+              <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+              <p><button>Add to Cart</button></p>
+            </div>
+            <div class="cardcart" style="width: 19rem;
+            float: left;
+            margin-left: 2rem;">
+              <img class="cloths" src="neck11.png" alt="Denim Jeans" style="width:100%">
+              <h1>Tailored Jeans</h1>
+              <p class="price">$19.99</p>
+              <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+              <p><button>Add to Cart</button></p>
+            </div>
+            <div class="cardcart" style="width: 19rem;
+            float: left;
+            margin-left: 2rem;">
+              <img class="cloths" src="neck12.png" alt="Denim Jeans" style="width:100%">
+              <h1>Tailored Jeans</h1>
+              <p class="price">$19.99</p>
+              <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+              <p><button>Add to Cart</button></p>
+            </div>
+            </div><br>
+
+            <div class="columnp" style="float: left;margin-top: 4rem;">
+                <div class="cardcart" style="float: left;
+                width: 19rem;margin-left: 20rem;">
+                  <img class="cloths" src="neck13.png" alt="Denim Jeans" style="width:100%">
+                  <h1>Tailored Jeans</h1>
+                  <p class="price">$19.99</p>
+                  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+                  <p><button>Add to Cart</button></p>
+                </div>
+                <div class="cardcart" style="width: 19rem;
+                float: left;
+                margin-left: 2rem;">
+                  <img class="cloths" src="neck14.png" alt="Denim Jeans" style="width:100%">
+                  <h1>Tailored Jeans</h1>
+                  <p class="price">$19.99</p>
+                  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+                  <p><button>Add to Cart</button></p>
+                </div>
+                <div class="cardcart" style="width: 19rem;
+                float: left;
+                margin-left: 2rem;">
+                  <img class="cloths" src="neck15.png" alt="Denim Jeans" style="width:100%">
+                  <h1>Tailored Jeans</h1>
+                  <p class="price">$19.99</p>
+                  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+                  <p><button>Add to Cart</button></p>
+                </div>
+                </div><br>
+
+                <div class="columnp" style="float: left;margin-top: 4rem;">
+                    <div class="cardcart" style="float: left;
+                    width: 19rem;margin-left: 20rem;">
+                      <img class="cloths" src="neck16.png" alt="Denim Jeans" style="width:100%">
+                      <h1>Tailored Jeans</h1>
+                      <p class="price">$19.99</p>
+                      <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+                      <p><button>Add to Cart</button></p>
+                    </div>
+                    <div class="cardcart" style="width: 19rem;
+                    float: left;
+                    margin-left: 2rem;">
+                      <img class="cloths" src="neck17.png" alt="Denim Jeans" style="width:100%">
+                      <h1>Tailored Jeans</h1>
+                      <p class="price">$19.99</p>
+                      <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+                      <p><button>Add to Cart</button></p>
+                    </div>
+                    <div class="cardcart" style="width: 19rem;
+                    float: left;
+                    margin-left: 2rem;">
+                      <img class="cloths" src="neck18.png" alt="Denim Jeans" style="width:100%">
+                      <h1>Tailored Jeans</h1>
+                      <p class="price">$19.99</p>
+                      <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+                      <p><button>Add to Cart</button></p>
+                    </div>
+                    </div><br>
+  </div>
+       
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+    <div class="footer">
+        <p style="padding-top: 2rem;padding-top: 2rem;
+        margin-left: -62rem;
+        font-size: 30pt;
+        color: aqua;">Fashion Factory.in</p>
+        <hr style="color: aliceblue;">
+
+        <div class="row1">
+         <div class="column1">
+           <p class="linkhead">Fashion Factory</p>
+           <ul style="text-align: initial;">
+          <li><a href="#" class="foot">Get to Know Us</a></li>
+           <li><a href="#" class="foot">Terms & Conditions</a></li>
+           <li><a href="#" class="foot">Fashion cares</a></li>
+           <li><a href="#" class="foot">Gift a smile</a></li>
+           </ul>
+         </div>
+
+        
+         <div class="column1">
+           <P class="linkhead1">Shop</P>
+           <ul style="text-align: initial;">
+          <li><a href="#" class="foot">Women Clothing</a></li>
+           <li><a href="#" class="foot">Accesories</a></li>
+           <li><a href="#" class="foot">Beauty Products</a></li>
+           <li><a href="#" class="foot">New Arrivals</a></li>
+           </ul>
+         </div>
+        
+       
+         <div class="column1">
+           <p class="linkhead1">Help</p>
+           <ul style="text-align: initial;">
+          <li><a href="#" class="foot">Track your Order</a></li>
+           <li><a href="#" class="foot">Payments</a></li>
+           <li><a href="#" class="foot">Returns & Cancellations</a></li>
+           <li><a href="#" class="foot">Customer Care</a></li>
+           </ul>
+         </div>
+       
+         <div class="column1">
+           <p class="linkhead2">Payments</p>
+           <ul style="text-align: initial;">
+          <li><a href="#" class="foot">Cash On Delivery</a></li>
+           <li><a href="#" class="foot">Debit & Credit Card</a></li>
+           <li><a href="#" class="foot">Net Banking</a></li>
+           <li><a href="#" class="foot"> Redeem Coupons</a></li>
+           </ul>
+         </div>
+        </div>
+        
+        
+       
+       
+        <p style="font-weight: 600;">Connect with Us</p>
+        <p>Email us : fashionfactory@gmail.com |  Contact no: +91-123456789</p>
+        <div style="padding-bottom: 0rem;">
+         <a class="face" href="#"><img  class="face" src="facebook1.png"></a>
+         <a class="face" href="#"><img  class="face"src="youtube1.png"></a>
+         <a class="face" href="#"><img  class="face" src="whats1.png"></a>
+         <a class="face" href="#"><img  class="face" src="insta1.png"></a>
+
+         <div>
+           <p>Pay with</p>
+           <a class="face" href="#"><img  class="face" src="bhim.png"></a>
+           <a class="face" href="#"><img  class="face" src="gopay.png"></a>
+           <a class="face" href="#"><img  class="face" src="paytm.png"></a>
+           <a class="face" href="#"><img  class="face" src="debit.png"></a>
+         </div>
+         
+
+          </div>
+     
+        
+     
+      <p style="background: black;color:linen"> Condition of Use & Sale | Developed By fashionfactory.in(India) |  © 2021 all Rights Reserved</p>
+     
+      </div> 
+  
+
+</div>   
+
+
+
+
+
+
+</body>
+</html>
